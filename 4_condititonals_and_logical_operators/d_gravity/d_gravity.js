@@ -2,41 +2,52 @@
 //the bottom, have it bounce, but with gravity affecting it, such that each time it
 //bounces, it bounces less high.
 
-var x = 200;
-var y = 0;
-var yspeed = 5;
-var p= 200;
+function sketch_d_gravity (p) {
+  var x = 200;
+  var y = 0;
+  var yspeed = 5;
+  var q = 200;
+  var counter = 25;
 
-function setup() {
-  createCanvas(400,400);
-  frameRate(30);
-}
-
-function mySquare(y) {
-  stroke(0);
-  strokeWeight(4); 
-  fill(255);
-  rectMode(CENTER);
-  rect(x,y,20,20);
-}
-
-function draw() {
-  background(255, 204, 0);
-  
-  mySquare(y);
-
-  if (y == height - 20) {
-    yspeed = yspeed * -1;
+  p.setup = function() {
+    p.createCanvas(400,400);
+    p.frameRate(30);
   }
-  
-  if (y<p && yspeed<0) {
-  yspeed = yspeed * -1;
-  p=p+p/2;
+
+  function mySquare(y) {
+    p.stroke(0);
+    p.strokeWeight(4); 
+    p.fill(255);
+    p.rectMode(p.CENTER);
+    p.rect(x, y, 20, 20);
   }
-  
-  if (p>= height && y>= height-20){
-    y=height-20;
+
+  p.draw = function() {
+    p.background(255, 204, 0);
+    
+    mySquare(y);
+
+    if (y == p.height - 20) {
+      yspeed = yspeed * -1;
+    }
+    
+    if (y < q && yspeed < 0) {
+      yspeed = yspeed * -1;
+      q = q + q/2;
+    }
+    
+    if (q >= p.height && y >= p.height - 20){
+      y = p.height - 20;
+      counter = counter - 1;
+      if (counter === 0) {
+        y = 0;
+        q = 200;
+        yspeed = 5
+        counter = 25;
+      }
+    }
+    
+    y = y + yspeed;
   }
-  
-  y = y + yspeed;
 }
+new p5(sketch_d_gravity, 'd_gravity')

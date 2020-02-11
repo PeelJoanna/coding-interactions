@@ -4,15 +4,116 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- PLEASE NO CHANGES BELOW THIS LINE (UNTIL I SAY SO) -->
-  <script language="javascript" type="text/javascript" src="libraries/p5.min.js"></script>
-  <script language="javascript" type="text/javascript" src="recreate_gameboy.js"></script>
+  <script language="javascript" type="text/javascript" src="p5.min.js"></script>
+  <script language="javascript" type="text/javascript" src="1_drawing/recreate_gameboy/recreate_gameboy.js"></script>
   <!-- OK, YOU CAN MAKE CHANGES BELOW THIS LINE AGAIN -->
 
   <!-- This line removes any default padding and style.
        You might only need one of these values set. -->
-  <style> body { padding: 0; margin: 0; } </style>
+  <style>
+    body { padding: 0; margin: 0; }
+    h1, h2, p { padding-left: 10px; }
+    .exercises {
+      display: flex;
+      justify-content: space-evenly;
+      flex-wrap: wrap;
+    }
+    .exercises > div > div, .exercise {
+      border: solid #000 1px;
+    }
+
+  </style>
 </head>
 
 <body>
+  <h1>Coding Interaction</h1>
+  <p>Processing exercise using p5js</p>
+  <h2>1. Drawing</h2>
+  <div class="exercises">
+    <div>
+      <div id="recreate_gameboy"></div>
+    </div>
+  </div>
+  <h2>2. Interaction</h2>
+  <div class="exercises">
+      <div>
+        <h3>2. a. A Black Circular Brush</h3>
+        <div id="a_black_circular_brush"></div>
+      </div>
+      <div>
+        <h3>2. b. A line vary thickness</h3>
+        <div id="b_a_line_vary_thickness"></div>
+      </div>
+      <div>
+        <h3>2. c. Black Square</h3>
+        <div id="c_black_square"></div>
+      </div>
+  </div>
+  <h2>3. Variables</h2>
+  <div class="exercises">
+    <div>
+      <div id="wiggling_bubbles"></div>
+    </div>
+  </div>
+  <h2>4. Conditional and logical operators</h2>
+  <div class="exercises">
+    <div>
+      <h3>4. a. Change Color Background</h3>
+      <div id="a_change_color_background"></div>
+    </div>
+    <div>
+      <h3>4. b. Circle bounced edges</h3>
+      <div id="b_circle_bounce_edges"></div>
+    </div>
+    <div>
+      <h3>4. c. Change Color when clicked</h3>
+      <div id="c_Change_color_when_clicked"></div>
+    </div>
+    <div>
+      <h3>4. d. Gravity</h3>
+      <div id="d_gravity"></div>
+    </div>
+    <div>
+      <h3>4. e. Terror</h3>
+      <div id="e_terror"></div>
+    </div>
+    <div>
+      <h3>4. f. Flee</h3>
+      <div id="f_flee"></div>
+    </div>
+  </div>
+  <h2>5. Loops</h2>
+  <div class="exercises">
+    <div>
+      <h3>5. a. While loop</h3>
+      <div id="a_while_loop"></div>
+    </div>
+    <div>
+      <h3>5. b. While loop spacing</h3>
+      <div id="b_while_loop_spacing"></div>
+    </div>
+    <div>
+      <h3>5. c. For Loop</h3>
+      <div id="c_for_loop"></div>
+    </div>
+    <div>
+      <h3>5. d. Squares Shade</h3>
+      <div id="d_squares_shade"></div>
+    </div>
+  </div>
+  <script language="javascript" type="text/javascript" src="2_Interaction/a_black_circular_brush/a_black_circular_brush.js"></script>
+  <script language="javascript" type="text/javascript" src="2_Interaction/b_a_line_vary_thickness/b_a_line_vary_thickness.js"></script>
+  <script language="javascript" type="text/javascript" src="2_Interaction/c_black_square/c_black_square.js"></script>
+  <script language="javascript" type="text/javascript" src="3_variables/wiggling_bubbles/wiggling_bubbles.js"></script>
+  <script language="javascript" type="text/javascript" src="4_condititonals_and_logical_operators/a_change_color_background/a_change_color_background.js"></script>
+  <script language="javascript" type="text/javascript" src="4_condititonals_and_logical_operators/b_circle_bounce_edges/b_circle_bounce_edges.js"></script>
+  <script language="javascript" type="text/javascript" src="4_condititonals_and_logical_operators/c_Change_color_when_clicked/c_Change_color_when_clicked.js"></script>
+  <script language="javascript" type="text/javascript" src="4_condititonals_and_logical_operators/d_gravity/d_gravity.js"></script>
+  <script language="javascript" type="text/javascript" src="4_condititonals_and_logical_operators/e_terror/e_terror.js"></script>
+  <script language="javascript" type="text/javascript" src="4_condititonals_and_logical_operators/f_flee/f_flee.js"></script>
+  <script language="javascript" type="text/javascript" src="5_loops/a_while_loop/a_while_loop.js"></script>
+  <script language="javascript" type="text/javascript" src="5_loops/b_while_loop_spacing/b_while_loop_spacing.js"></script>
+  <script language="javascript" type="text/javascript" src="5_loops/c_for_loop/c_for_loop.js"></script>
+  <script language="javascript" type="text/javascript" src="5_loops/d_squares_shade/d_squares_shade.js"></script>
 </body>
 </html>

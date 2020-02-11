@@ -1,23 +1,26 @@
 //Make a circle that shudders with terror every time you point the mouse at it. Use
 //dist().
 
-var x;
-var y;
+function sketch_e_terror (p) {
+  var x;
+  var y;
 
-function setup(){
-  createCanvas(400,400);
-  x = random (width/2, width/2);
-  y = height/2;
-  ellipseMode(CENTER);
-  ellipse (x,y,100,100);
-}
-
-function draw (){
-  background (0);
-  
-  if (dist(x,y,mouseX,mouseY)<50) {
-    x = random (width/2 - 5, width/2+5);
+  p.setup = function () {
+    p.createCanvas(400,400);
+    x = p.random(p.width/2, p.width/2);
+    y = p.height/2;
+    p.ellipseMode(p.CENTER);
+    p.ellipse(x, y, 100, 100);
   }
-  ellipseMode(CENTER);
-  ellipse (x,y,100,100);
+
+  p.draw = function () {
+    p.background(0);
+    
+    if (p.dist(x, y, p.mouseX, p.mouseY) < 50) {
+      x = p.random(p.width/2 - 5, p.width / 2+5);
+    }
+    p.ellipseMode(p.CENTER);
+    p.ellipse(x, y, 100, 100);
+  }
 }
+new p5(sketch_e_terror, 'e_terror')

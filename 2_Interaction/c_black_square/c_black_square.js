@@ -2,18 +2,22 @@
 //and drag to draw a line with a square brush, and erase the canvas when you
 //press a key (set rectMode() to center).
 
-function setup() {
-  createCanvas(400, 400);
-  background(255);
-}
+function sketch_c_black_square(p) {
+  p.setup = function () {
+    p.createCanvas(400, 400);
+    p.background(255);
+  }
 
-function mousePressed() {
-  noStroke();
-  fill(0);
-  rectMode(CENTER);
-  rect(mouseX, mouseY, 30, 30);
-}
+  p.mousePressed = function () {
+    p.noStroke();
+    p.fill(0);
+    p.rectMode(p.CENTER);
+    p.rect(p.mouseX, p.mouseY, 30, 30);
+  }
 
-function keyPressed(){
-  background(255);
+  p.keyPressed = function () {
+    p.background(255);
+  }
+
 }
+new p5(sketch_c_black_square, 'c_black_square');
